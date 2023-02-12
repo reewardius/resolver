@@ -1,6 +1,9 @@
 # resolveDomains
 
-Given a list of domains, you resolve them and get the IP addresses.
+In general, the main idea of this repo (now) is to search for Origin IP
+Given a list of domains, you resolve them and get the IP addresses. 
+Then use ffuf to search for the Origin IP.
+
 
 # Installation
 
@@ -35,7 +38,7 @@ Don't forget the ./ in front of the program name if you are compiling locally!
 ![image](https://user-images.githubusercontent.com/16885065/119138781-8bbd9f00-ba42-11eb-87f8-63e38fc93e29.png)
 
 
-#Origin IP
+# Origin IP
 
 Find Origin IP.
 1. subdomain enumeration.
