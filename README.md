@@ -1,8 +1,8 @@
 # resolveDomains
 
-In general, the main idea of this repo (now) is to search for Origin IP
-Given a list of domains, you resolve them and get the IP addresses. 
-Then use ffuf to search for the Origin IP.
+- In general, the main idea of this repo (now) is to search for Origin IP.
+- Given a list of domains, you resolve them and get the IP addresses. 
+- Then use ffuf to search for the Origin IP.
 
 
 # Installation
