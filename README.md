@@ -45,4 +45,8 @@ Find Origin IP.
 2. Save All A records in ip_addresses.txt.
 3. Remove CDN IP. (https://github.com/projectdiscovery/cdncheck)
 4. Fuzz Host Header on IPs.txt with list of all subdomains.
-5. for ip in $(cat ip_addresses.txt);do echo $ip && ffuf -w ./subs -u http://$ip -H "Host: FUZZ" -s -mc 200; done
+```
+> for ip in $(cat ip_addresses.txt);do echo $ip && ffuf -w ./subs -u http://$ip -H "Host: FUZZ" -s -mc 200; done
+> cat ip_addresses.txt | parallel 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
+> cat ip_addresses.txt | xargs -I {} sh -c 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
+> head -n 10 ip_addresses.txt | tr '\n' ',' | sed 's/,$//' | xargs -I {} sh -c 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
