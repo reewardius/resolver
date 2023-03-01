@@ -50,3 +50,5 @@ Find Origin IP.
 > cat ip_addresses.txt | parallel 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
 > OR cat ip_addresses.txt | xargs -I {} sh -c 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
 > OR head -n 10 ip_addresses.txt | tr '\n' ',' | sed 's/,$//' | xargs -I {} sh -c 'echo {} && ffuf -w ./subs -u http://{} -H "Host: FUZZ" -s -mc 200'
+
+> git clone https://github.com/ZemlyakovDmitry/cloudfuck
